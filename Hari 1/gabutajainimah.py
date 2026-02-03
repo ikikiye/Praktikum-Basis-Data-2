@@ -7,7 +7,7 @@ b = input("Guess a number = ")
 
 if a == b:
     print("wow, genius")
-    print(a)
+    print("Jawabannya = ", a)
 else:
     print("hahahhahaha")
-    print(a)
+    print("Jawabannya = ", a)

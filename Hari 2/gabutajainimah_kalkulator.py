@@ -42,4 +42,4 @@ while True:
         break
     else:
         print("woi yang bener ngetiknya")
-        input()
+        break

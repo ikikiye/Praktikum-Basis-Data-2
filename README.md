@@ -14,7 +14,7 @@ Read me Read Me! hahay
 <p></p>
 
 <h1>Hari 2: Dasar-Dasar Pemrograman Python 1</h1>
-<p></p>
+<p>ya gitu lah intinya.</p>
 <ul>
 <li>Python itu bahasa pemrograman, bisa buat analisis data dari database jg. Bisa pake kayak Microsoft Access, tapi kalo pengolahan perlu koding juga.</li>
 <li>Koding ujungnya belajar di algoritma, dan algoritman itu independen dari alatnya.</li>
@@ -24,5 +24,17 @@ Read me Read Me! hahay
 <li>(ini bahas kenapa ada database di arsip)</li>
 <li>Toolsnya: Text Editor (Notepad++) dan IDE (JupyterNotebook, Spyder, Pycharm)</li>
 <li>*Latihan aritmatika python (kali kurang tambah bagi, sama print dan input??)*</li>
+</ul>
+<p></p>
+
+<h1>Hari 3: Dasar-Dasar Pemrograman Python 2</h1>
+<p></p>
+<ul>
+<li>*Bahas tugas pertemua sebelumnya*</li>
+<li>Flowchart, mau belajar tapi gamau, ya gitu lah, katanya mau dikasih ppt khusus nanti, kali</li>
+<li>Bahas AI lagi, dan kenapa gabakal sepenunya terganti (lagi)</li>
+<li>Kondisi di python (if else)</li>
+<li>*Latihan*</li>
+<li>Belajar iterasi (For Loop)</li>
 </ul>
 <p></p>

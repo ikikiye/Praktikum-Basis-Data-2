@@ -30,11 +30,23 @@ Read me Read Me! hahay
 <h1>Hari 3: Dasar-Dasar Pemrograman Python 2</h1>
 <p></p>
 <ul>
-<li>*Bahas tugas pertemua sebelumnya*</li>
+<li>*Bahas tugas pertemuan sebelumnya*</li>
 <li>Flowchart, mau belajar tapi gamau, ya gitu lah, katanya mau dikasih ppt khusus nanti, kali</li>
 <li>Bahas AI lagi, dan kenapa gabakal sepenunya terganti (lagi)</li>
 <li>Kondisi di python (if else)</li>
 <li>*Latihan*</li>
 <li>Belajar iterasi (For Loop)</li>
+</ul>
+<p></p>
+
+<h1>Hari 4: </h1>
+<p></p>
+<ul>
+<li>Review dan nyobain if else lagi</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
 </ul>
 <p></p>

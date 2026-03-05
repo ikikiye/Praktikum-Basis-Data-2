@@ -36,7 +36,7 @@ while True:
     konfirmasi = input("Apakah ingin lanjut? (y/n) :").strip().upper()
 
     if konfirmasi == "Y":
-        alif = 4
+        continue
     elif konfirmasi == "N":
         os.system('clear')
         break

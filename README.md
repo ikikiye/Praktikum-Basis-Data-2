@@ -50,3 +50,15 @@ Read me Read Me! hahay
 <li></li>
 </ul>
 <p></p>
+
+<h1>Hari 5: </h1>
+<p></p>
+<ul>
+<li>*Kuis*</li>
+<li>FUNGSI di python, biasanya buat algoritma</li>
+<li>Contoh-contoh fungsi</li>
+<li>latihan fungsi (dapet 50k guys)</li>
+<li></li>
+<li></li>
+</ul>
+<p></p>

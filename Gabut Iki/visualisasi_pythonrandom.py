@@ -11,20 +11,22 @@ def randGen(inputResolusiX, inputResolusiY, inputKontras, inputKecerahan):
         print()
 
 while True:
-    os.system('clear')
+    os.system('cls')
     inputResolusiX = int(input("Resolusi X = "))
     inputResolusiY = int(input("Resolusi Y = "))
     inputKecerahan = int(input("Kecerahan = "))
     inputKontras = int(input("Kontras = "))
     print()
 
-    randGen(inputResolusiX, inputResolusiY, inputKontras, inputKecerahan)
+    for i in range(200):
+        os.system('cls')
+        randGen(inputResolusiX, inputResolusiY, inputKontras, inputKecerahan)
 
     confirmationCont = input("\nApakah ingin mengulang program? (y/n) ").strip().upper()
 
     if confirmationCont == "Y":
-        os.system('clear')
+        os.system('cls')
         continue
     else:
-        os.system('clear')
+        os.system('cls')
         break

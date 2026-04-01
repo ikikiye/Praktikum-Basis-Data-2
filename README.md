@@ -62,3 +62,15 @@ Read me Read Me! hahay
 <li></li>
 </ul>
 <p></p>
+
+<h1>Hari 6/7 lupa: </h1>
+<p></p>
+<ul>
+<li>Python</li>
+<li>database <-> aplikasi</li>
+<li>Contoh-contoh fungsi</li>
+<li>latihan fungsi (dapet 50k guys)</li>
+<li></li>
+<li></li>
+</ul>
+<p></p>

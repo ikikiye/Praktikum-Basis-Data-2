@@ -7,13 +7,7 @@ userDB = pymysql.connect(
   database="mahasiswaDB_Basdat"
 )
 
-SQL = userDB.cursor()
-jumlahRow = SQL.rowcount
-SQL.execute("select * from master_mhs order by nama")
-hasilnya = SQL.fetchall()
-"""
-for x in hasilnya:
-    print(x)"""
+SQL = userDB.cursor() #inisiasi kayaknya
 
 def pencarianData(wildcard):
 
@@ -34,21 +28,21 @@ def pencarianData(wildcard):
     # "pisahinnya gmn bang?" dari tuple SQL itu kita kasih masing2 nilainya sbuah variabel, abistu kita format dari stringnya
     # begitu
 
-    x = 0 # x buat indeks si datanya 
+    indeksData = 0 # buat indeks si datanya 
     for formatBaris in hasilnya:
-        dataSebelum = hasilnya[x-1]
+        dataSebelum = hasilnya[indeksData - 1]
         npmFB, namaFB, asalFB, namaMataKuliahFB, nilaiFB = formatBaris
         npmDS = dataSebelum[0]
         
-        if x == 0:  # buat inisiasi nama dan nilai baris pertama, karena -1 gak valid buat tuple
-            x = x+1
+        if indeksData == 0 and npmFB != npmDS:  # buat inisiasi nama dan nilai baris pertama
+            indeksData = indeksData + 1 
             print("\n%s, %s, %s" % (npmFB, namaFB, asalFB))
             print("%s %d" % (namaMataKuliahFB, nilaiFB))
-        elif x > 0 and npmFB == npmDS:  # ini baru mulai nyari kesamaan sama npm terus buang namanya kalo masi sama, abistu >0 supaya gak stuck di 0 if pertama terus
-            x = x+1
+        elif indeksData > 0 and npmFB == npmDS:  # ini baru mulai nyari kesamaan sama npm terus buang namanya kalo masi sama, abistu >0 supaya gak stuck di 0 if pertama terus
+            indeksData = indeksData + 1
             print("%s %d" % (namaMataKuliahFB, nilaiFB))
         else:  # ini buat kalo udh ganti nama mahasiswanya
-            x=x+1
+            indeksData = indeksData + 1
             print("\n%s, %s, %s" % (npmFB, namaFB, asalFB))
             print("%s %d" % (namaMataKuliahFB, nilaiFB))
 

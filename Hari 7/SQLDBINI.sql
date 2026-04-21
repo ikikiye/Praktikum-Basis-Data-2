@@ -1,4 +1,6 @@
-CREATE DATABASE sekolah-kita;
+CREATE DATABASE sekolah_kita;
+
+USE sekolah_kita;
 
 CREATE TABLE master_mhs (
   npm varchar(10) PRIMARY KEY,

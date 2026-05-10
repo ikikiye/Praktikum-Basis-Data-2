@@ -20,15 +20,26 @@ def userInterface():
 def cekInputKosong(dataDiambil, editDeskripsi, editHarga):
     if len(editDeskripsi) > 0:
         deskripsiBaru = editDeskripsi
+        dataDeskripsiDiubah = True
     else:
         deskripsiBaru = dataDiambil[1]
+        dataDeskripsiDiubah = False
     
     if len(editHarga) > 0:
         hargaBaru = editHarga
+        dataHargaDiubah = True
     else:
         hargaBaru = dataDiambil[2]
+        dataHargaDiubah = False
+
+    if dataDeskripsiDiubah and dataHargaDiubah:
+        status = "Data berhasil diubah"
+    elif dataDeskripsiDiubah ^ dataHargaDiubah:
+        status = "Data diubah parsial"
+    else:
+        status = "Data tidak diubah"
     
-    return (deskripsiBaru, hargaBaru)
+    return (deskripsiBaru, hargaBaru, status)
 
 def ambilData(wildcard):
     if len(wildcard) > 0:
@@ -61,19 +72,28 @@ def tambahData():
 def editData():
     kodeDataYangDiedit = input("Kode data yang ingin diedit: ")
     dataDiambilTuple, banyakData = ambilData(kodeDataYangDiedit)
-    dataDiambil = dataDiambilTuple[0]
-    editDeskripsi = input("Deskripsi baru: ")
-    editHarga = input("Harga baru: ")
-    deskripsiBaru, hargaBaru = cekInputKosong(dataDiambil, editDeskripsi, editHarga)
-    SQL.execute("UPDATE barang SET deskripsi = '"+deskripsiBaru+"', harga = "+str(hargaBaru)+" WHERE kode = '"+kodeDataYangDiedit+"'")
-    userDB.commit()
-    print("Data berhasil diedit")
+    
+    if banyakData == 0:
+        print("Data tidak ada")
+    else:
+        dataDiambil = dataDiambilTuple[0]
+        editDeskripsi = input("Deskripsi baru: ")
+        editHarga = input("Harga baru: ")
+        deskripsiBaru, hargaBaru, statusPerubahan = cekInputKosong(dataDiambil, editDeskripsi, editHarga)
+        SQL.execute("UPDATE barang SET deskripsi = '"+deskripsiBaru+"', harga = "+str(hargaBaru)+" WHERE kode = '"+kodeDataYangDiedit+"'")
+        userDB.commit()
+        print(statusPerubahan)
 
 def hapusData():
     kodeDataYangDihapus = input("Kode data yang ingin dihapus: ")
-    SQL.execute("DELETE FROM barang WHERE kode = '"+kodeDataYangDihapus+"'")
-    userDB.commit()
-    print("Data berhasil dihapus")
+    dataDiambil, banyakData = ambilData(kodeDataYangDihapus)
+    
+    if banyakData == 0:
+        print("Data tidak ditemukan")
+    else:
+        SQL.execute("DELETE FROM barang WHERE kode = '"+kodeDataYangDihapus+"'")
+        userDB.commit()
+        print("Data berhasil dihapus")
 
 while True:
     os.system('clear')

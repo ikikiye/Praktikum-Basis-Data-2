@@ -65,7 +65,6 @@ def tambahData():
         tambahDeskripsi = input("Deskripsi (F2,varchar): ")
         tambahHarga = input("Harga (F3,int): ")
         SQL.execute("INSERT INTO barang (kode, deskripsi, harga) VALUES ('"+tambahKode+"', '"+tambahDeskripsi+"', "+tambahHarga+");")
-        inkremen = inkremen + 1
     userDB.commit()
     print(banyakTambahanData, "data ditambahkan")
 

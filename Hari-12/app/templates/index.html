@@ -1,11 +1,6 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Tugas PBD</title>
-    </head>
-    <body>
-        {% for mahasiswa in dataMahasiswa %}
-        <p>{{ mahasiswa.npm }} | {{ mahasiswa.nama }}</p>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content%}
+    {% for barang in dataTabel %}
+    <p>{{ barang.kode }} | {{ barang.deskripsi }} | {{ barang.harga }}</p>
+    {% endfor %}
+{% endblock %}

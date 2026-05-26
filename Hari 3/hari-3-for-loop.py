@@ -1,2 +1,4 @@
 for i in range(1,6):
-    print(i)
+    x = 1
+    print(i, x)
+    x = x+1
